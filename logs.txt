@@ -1,0 +1,35 @@
+Author: Zaneta Todevska <zanetatodevska@gmail.com>
+Date:   Sun Apr 2 01:43:20 2023 +0200
+
+    Fix method sumEvenNumbers
+
+commit f0f24a26668594ec147f898da7826fef6bf34f61
+Merge: cfe6460 a9349ab
+Author: Zaneta Todevska <zanetatodevska@gmail.com>
+Date:   Sun Apr 2 01:45:27 2023 +0200
+
+    Merge branch 'bug2'
+
+commit a9349abfbbd40f508d56f31fdda6c408dde8d751 (bug2)
+Author: Zaneta Todevska <zanetatodevska@gmail.com>
+Date:   Sun Apr 2 01:41:47 2023 +0200
+
+    Fix wrong condition in filterOddNumbers
+
+commit cfe6460cfb2d7af2a623d8ea05c59a2ff56c8a30 (bug1)
+Author: Zaneta Todevska <zanetatodevska@gmail.com>
+Date:   Sun Apr 2 01:39:51 2023 +0200
+
+    Fix wrong loop for reading
+
+commit b6f357c872d8596fd9bde74cd2931e6f9a5e47ae
+Author: Zaneta Todevska <zanetatodevska@gmail.com>
+Date:   Sun Apr 2 01:36:21 2023 +0200
+
+    Add java class
+
+commit 1fc75187660ffef28392c34da1b135c3a3321fc5
+Author: Zaneta Todevska <zanetatodevska@gmail.com>
+Date:   Sun Apr 2 01:33:50 2023 +0200
+
+    Initial commit
