@@ -1,0 +1,110 @@
+git confing -- global user.name "Zaneta Todevska"
+git confing --global user.email zanetatodevska@gmail.com
+
+___________________________________________________________
+
+Najpravo napraviv remote repo na Github, a potoa i na moeto local repo pod
+ime SI_2023_lab1_205005 so komandata:
+
+mkdir SI_2023_lab1_205005
+cd SI_2023_lab1_205005 - vleguvame vo mojot lokalen repozitorium 
+git init -go inicijaliziram lokalnitor repozitorium deka e git
+
+____________________________________________________________
+
+Tuka najprvo se dodava READM.md datoteka:
+
+1.nano README.md - za da zapisam potrebni informacii vo datotekata
+2.git add README.md - ovaa datoteka sega se dodava na stage area
+3.git commit -m "Inicial commit" - soodvetna poraka koja sakam da bide ispisena pri dodavanjeto na datotekata na moeto odalecen repozitorium
+4.git remote add origin master https://github.com/zaneta88/SI_2023_lab1_205005.git
+5.git push -u origin master - so ovie dve linii ja dodavam datotekata README.md na mojot odalecen repozitorium
+
+______________________________________________________________
+
+Sega e potrebno dodavanje na java klasa. Toa go pravam na isti nacin kako 
+i dodavanje na datotekata README.md, pa komandite ne mora da gi objasnuvam
+1.nano SILab1.java
+2.git add SILab1.java
+3.git commit -m "Add java class"
+4.git push -u origin master
+
+_______________________________________________________________
+
+E sega pod sinhroniziacija na site granki podrazbirav so komandata
+1.git fetch
+2.git merge origin/master
+3.git pull
+
+________________________________________________________________
+
+Potoa otvarame 3 granki i gi resavame problemite
+
+git branch bug1
+git branch bug2
+git branch bug3 - so ovie tri komandi otvorivme tri novi granki za resavanje na nasite greski
+
+__________________
+
+git checkout bug1 - se prefrlame na prvata granka
+nano SILab1.java - ja otvarame java klasta i ja popravame greskata za citanje na n broevi od standarden vlez
+                   t.e vo for ciklusot namesto i<=n popraviv na i<n
+git add SILab1.java - so ovaa ovoj fajl odi vo modified 
+git commit -m "Fix wrong loop reading" - ovoa e porakata koja ke ja prosledi mojata promena vo github
+
+__________________
+
+git checkout bug2 - se prefrlam na vtorata granka 
+nano SILab1.java - ja otvaram java klasata i go popravam uslovt vo metodot filterOddNumbers
+                   t.e namesto e%2==0, go promeniv vo e%2!=0
+git add SILab1.java
+git commit -m "Fix wrong condition in filterOddNumbers"
+
+__________________
+
+git checkout bug3 - se prefrlam na grankata 3
+nano SILab1.java - ja otvaram java klasata i namesto sum=1, go menuvam vo sum=0
+                   i namesto sum*=el; go menuvam vo sum+=el; 
+git add SILab1.java
+git commit -m "Fix method sumEvenNumbers"
+
+_______________________________________________________________  
+
+Povtorno sinhronizacija i se prefrlame na grankata master od kade pocnuvame
+da gi spojuvame grankite
+
+git checkout master
+git merge bug1 - fast forward spojuvanje bez nikakvi konflikti, najednostavno
+
+git checkout master
+git merge bug2 - e sea tuka se otvara editor kaj so treba da se napise poraka
+                 od stilo "Merge branch bug2" i so escape:wq+Enter uspesno
+                 e spojuvanjeto na grankata bug2 po fast forward strategija 
+                 bez konflikti
+
+Grankata bug3 konmaster treba da se spoe so rebase:
+git checkout bug3 - najpravo se prefrlame na grankata 3
+git rebase master - so ovaa komanda nie komitite od bug3 gi postavuvame vo
+                    nekoja temp zona i se so e na master doaga na grankata
+                    bug3 i potoa sekoj komit so e na temp se nadovrzuva na
+                    ostanatite komiti
+git checkout master - se prefrluvame na master grankata
+git merge bug3 - ja spojuvame grankata bug3 kon master bez nikakvi konflikti
+
+__________________________________________________________________
+
+Sega samo dodavame uste 2 datoteki
+
+nano logs.txt - gi zapisuvame site logovi koj gi imame dobieno so komandata
+                git log
+git add logs.txt
+git commit -m "Final commit"
+nano 205005.txt - vo ovaa datoteka se vodi dokumentacija za se so e napraveno
+                  dosega so podetalno objasnuvanje za srabotuvanjeto na ovaa
+                  laboratoriska vezba
+git add 205005.txt
+git commit -m "Final commit"
+git push -u origin master - gi dodavam i ovie dve datoteki na odaleceniot 
+                            repozitorium
+
+
